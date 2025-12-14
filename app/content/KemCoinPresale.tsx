@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function KemCoinPresale() {
   const [timeLeft, setTimeLeft] = useState({
-    days: 7,
+    days: 27,
     hours: 0,
     minutes: 0,
     seconds: 0
@@ -44,12 +44,14 @@ export default function KemCoinPresale() {
             </div>
             
             <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
-              KemCoin - Projecting Real Growth
+              Support KEMCOIN (KEM) PRE-SALE
               <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-                and Wealth Creation
+              Powering Traderama Pro&apos;s Trading Revolution
               </span>
             </h1>
-            
+            <h2><span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+             Copy Experts • Earn Rewards • Share Profits
+              </span></h2>
             <p className="text-2xl text-gray-300 mb-12">
               The Token That Pays You to Trade Smarter
             </p>
