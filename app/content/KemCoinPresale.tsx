@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -452,6 +452,586 @@ export default function KemCoinPresale() {
                 Connect Wallet → Enter Amount → Confirm → Become a Genesis Trader
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+      {/* Flywheel Section */}
+      <section className="py-20 bg-gradient-to-b from-transparent via-purple-950/30 to-transparent">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">🎯 The Traderama Pro Flywheel</h2>
+            <p className="text-gray-400 text-lg">Your Path to Automated Wealth</p>
+          </div>
+
+          <div className="max-w-3xl mx-auto mb-12">
+            <div className="space-y-4">
+              {[
+                { step: 1, text: 'Buy KEM in Presale' },
+                { step: 2, text: 'Get Genesis Trader Status + NFT Strategies' },
+                { step: 3, text: 'Copy Winning Trades (auto-pilot profits)' },
+                { step: 4, text: 'Share Your Own Strategies (earn KEM + revenue share)' },
+                { step: 5, text: 'Earn 10X Rewards on ALL Platform Activity' },
+                { step: 6, text: 'Stake KEM for 30% APY (presale holders)' },
+                { step: 7, text: 'Receive Quarterly Revenue Payouts (3X-5X multiplier)' },
+                { step: 8, text: 'Reinvest → Compound → Build Wealth' }
+              ].map((item, idx) => (
+                <div key={idx}>
+                  <div className="bg-gradient-to-r from-purple-900/40 to-pink-900/40 backdrop-blur-lg p-6 rounded-2xl border border-purple-500/30 hover:border-purple-500/50 transition-all hover:transform hover:translate-x-2">
+                    <div className="flex items-center gap-4">
+                      <div className="bg-purple-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        {item.step}
+                      </div>
+                      <div className="text-xl font-semibold text-gray-200">{item.text}</div>
+                    </div>
+                  </div>
+                  {idx < 7 && (
+                    <div className="flex justify-center py-2">
+                      <div className="text-3xl text-purple-400">↓</div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-green-900/40 to-emerald-900/40 backdrop-blur-lg p-10 rounded-3xl border border-green-500/30 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-center mb-6 text-green-300">The Result:</h3>
+            <div className="space-y-4 text-lg">
+              <div className="flex items-start gap-3">
+                <span className="text-yellow-400 text-2xl">★</span>
+                <div>
+                  <span className="font-bold text-purple-300">Year 1:</span>
+                  <span className="text-gray-300"> 3X-5X your initial investment (conservative)</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-yellow-400 text-2xl">★</span>
+                <div>
+                  <span className="font-bold text-purple-300">Year 3:</span>
+                  <span className="text-gray-300"> 10X-20X (platform growth + compounding)</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-yellow-400 text-2xl">★</span>
+                <div>
+                  <span className="font-bold text-purple-300">Year 5:</span>
+                  <span className="text-gray-300"> 50X-100X (if Traderama becomes major player)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Case Scenarios */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">📊 Real Use Case Scenarios</h2>
+            <p className="text-gray-400 text-lg">See How Different Traders Win with KEM</p>
+          </div>
+
+          <div className="max-w-6xl mx-auto space-y-12">
+            {/* Scenario 1 */}
+            <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 backdrop-blur-lg p-8 rounded-3xl border border-blue-500/30">
+              <h3 className="text-3xl font-bold mb-4 text-blue-300">Scenario 1: The Copy Trader</h3>
+              <p className="text-xl text-gray-300 mb-6">Profile: Sarah, $1,000 presale investment</p>
+
+              <div className="space-y-6">
+                <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-blue-500/20">
+                  <h4 className="text-xl font-bold text-blue-300 mb-4">Month 1:</h4>
+                  <ul className="space-y-2 text-gray-300 font-mono text-sm">
+                    <li>├─ Buys 125,000 KEM at $0.008</li>
+                    <li>├─ Gets Genesis Trader status</li>
+                    <li>├─ Copies 3 profitable strategies (NFTs)</li>
+                    <li>├─ Strategies profit 12% = $120</li>
+                    <li>├─ Earns 1,500 KEM from activity (10X boost)</li>
+                    <li>└─ <span className="text-green-400 font-bold">Net: $120 profit + 1,500 KEM earned</span></li>
+                  </ul>
+                </div>
+
+                <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-blue-500/20">
+                  <h4 className="text-xl font-bold text-blue-300 mb-4">Month 6:</h4>
+                  <ul className="space-y-2 text-gray-300 font-mono text-sm">
+                    <li>├─ Original KEM now $0.015 = $1,875 value</li>
+                    <li>├─ Earned 12,000 additional KEM (10X boost) = $180</li>
+                    <li>├─ Trading profits: $800 (copying strategies)</li>
+                    <li>├─ Total portfolio: $2,855</li>
+                    <li>└─ <span className="text-green-400 font-bold">ROI: 185% in 6 months</span></li>
+                  </ul>
+                </div>
+
+                <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-green-500/30">
+                  <h4 className="text-xl font-bold text-green-300 mb-4">Year 1:</h4>
+                  <ul className="space-y-2 text-gray-300 font-mono text-sm">
+                    <li>├─ KEM price: $0.025 = $3,125 value</li>
+                    <li>├─ Earned 50,000 KEM (10X boost) = $1,250</li>
+                    <li>├─ Trading profits: $2,500</li>
+                    <li>├─ Revenue share payouts: $200</li>
+                    <li>├─ Total portfolio: $7,075</li>
+                    <li>└─ <span className="text-green-400 font-bold">ROI: 607% in 12 months</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Scenario 2 */}
+            <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-lg p-8 rounded-3xl border border-purple-500/30">
+              <h3 className="text-3xl font-bold mb-4 text-purple-300">Scenario 2: The Strategy Creator</h3>
+              <p className="text-xl text-gray-300 mb-6">Profile: Mike, $500 presale investment</p>
+
+              <div className="space-y-6">
+                <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-purple-500/20">
+                  <h4 className="text-xl font-bold text-purple-300 mb-4">Month 1:</h4>
+                  <ul className="space-y-2 text-gray-300 font-mono text-sm">
+                    <li>├─ Buys 62,500 KEM at $0.008</li>
+                    <li>├─ Shares his BTC scalping strategy</li>
+                    <li>├─ 50 traders copy it (earns 15% of their profits)</li>
+                    <li>├─ Total copier profits: $5,000</li>
+                    <li>├─ Mike&apos;s cut: $750</li>
+                    <li>├─ Plus 2,000 KEM bonus (10X boost)</li>
+                    <li>└─ <span className="text-green-400 font-bold">Net: $750 + 2,000 KEM in month 1</span></li>
+                  </ul>
+                </div>
+
+                <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-purple-500/20">
+                  <h4 className="text-xl font-bold text-purple-300 mb-4">Month 6:</h4>
+                  <ul className="space-y-2 text-gray-300 font-mono text-sm">
+                    <li>├─ Strategy now has 300 copiers</li>
+                    <li>├─ Monthly revenue share: $3,000-$5,000</li>
+                    <li>├─ KEM holdings: 75,000 (original + earned)</li>
+                    <li>├─ Value: $1,125 at $0.015</li>
+                    <li>├─ Total: $4,125+ portfolio</li>
+                    <li>└─ <span className="text-green-400 font-bold">ROI: 725% in 6 months (from strategy sharing alone!)</span></li>
+                  </ul>
+                </div>
+
+                <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-green-500/30">
+                  <h4 className="text-xl font-bold text-green-300 mb-4">Year 1:</h4>
+                  <ul className="space-y-2 text-gray-300 font-mono text-sm">
+                    <li>├─ Verified trader status (fast-tracked)</li>
+                    <li>├─ 1,000+ copiers on multiple strategies</li>
+                    <li>├─ Monthly revenue: $10,000-$15,000</li>
+                    <li>├─ Annual copy trading income: $120K+</li>
+                    <li>├─ KEM holdings value: $5,000+</li>
+                    <li>└─ <span className="text-green-400 font-bold">ROI: Became full-time trader earning 6 figures</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Scenario 3 */}
+            <div className="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 backdrop-blur-lg p-8 rounded-3xl border border-emerald-500/30">
+              <h3 className="text-3xl font-bold mb-4 text-emerald-300">Scenario 3: The Passive Staker</h3>
+              <p className="text-xl text-gray-300 mb-6">Profile: David, $2,000 presale investment</p>
+
+              <div className="space-y-6">
+                <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-emerald-500/20">
+                  <h4 className="text-xl font-bold text-emerald-300 mb-4">Month 1:</h4>
+                  <ul className="space-y-2 text-gray-300 font-mono text-sm">
+                    <li>├─ Buys 250,000 KEM at $0.008</li>
+                    <li>├─ Stakes at Platinum tier (30% APY presale bonus)</li>
+                    <li>├─ Monthly rewards: 6,250 KEM</li>
+                    <li>├─ Value: $62.50 at $0.01</li>
+                    <li>└─ <span className="text-green-400 font-bold">Passive income starts immediately</span></li>
+                  </ul>
+                </div>
+
+                <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-emerald-500/20">
+                  <h4 className="text-xl font-bold text-emerald-300 mb-4">Month 6:</h4>
+                  <ul className="space-y-2 text-gray-300 font-mono text-sm">
+                    <li>├─ Staking rewards: 37,500 KEM earned</li>
+                    <li>├─ Original + earned: 287,500 KEM</li>
+                    <li>├─ KEM price: $0.015</li>
+                    <li>├─ Portfolio value: $4,312</li>
+                    <li>├─ Revenue share payouts: $150</li>
+                    <li>└─ <span className="text-green-400 font-bold">Total: $4,462 (123% ROI, fully passive)</span></li>
+                  </ul>
+                </div>
+
+                <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-green-500/30">
+                  <h4 className="text-xl font-bold text-green-300 mb-4">Year 1:</h4>
+                  <ul className="space-y-2 text-gray-300 font-mono text-sm">
+                    <li>├─ Staking rewards: 75,000 KEM earned</li>
+                    <li>├─ Total holdings: 325,000 KEM</li>
+                    <li>├─ KEM price: $0.025</li>
+                    <li>├─ Portfolio value: $8,125</li>
+                    <li>├─ Revenue share payouts: $800</li>
+                    <li>├─ Total: $8,925</li>
+                    <li>└─ <span className="text-green-400 font-bold">ROI: 346% doing absolutely nothing</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Table */}
+      <section className="py-20 bg-gradient-to-b from-transparent via-purple-950/30 to-transparent">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">⚡ Why KemCoin Wins</h2>
+            <p className="text-gray-400 text-lg">vs Traditional Copy Trading Platforms</p>
+          </div>
+
+          <div className="max-w-5xl mx-auto overflow-x-auto">
+            <div className="bg-white/5 backdrop-blur-lg rounded-3xl border border-purple-500/30 p-8">
+              <table className="w-full text-left">
+                <thead>
+                  <tr className="border-b border-purple-500/30">
+                    <th className="pb-4 text-xl text-purple-300">Feature</th>
+                    <th className="pb-4 text-xl text-gray-400 text-center">eToro/3Commas</th>
+                    <th className="pb-4 text-xl text-green-400 text-center">Traderama Pro</th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-300">
+                  {[
+                    { feature: 'Monthly Fee', etoro: '$50-$500', traderama: 'FREE (Genesis holders)', highlight: true },
+                    { feature: 'Copy Trader Cut', etoro: '10-20%', traderama: '0% (Genesis holders)', highlight: true },
+                    { feature: 'Revenue Sharing', etoro: '❌ None', traderama: '✅ 30-50% to holders', highlight: true },
+                    { feature: 'Rewards for Usage', etoro: '❌ None', traderama: '✅ Earn KEM daily', highlight: true },
+                    { feature: 'Governance', etoro: '❌ None', traderama: '✅ Vote on everything', highlight: false },
+                    { feature: 'Staking Income', etoro: '❌ None', traderama: '✅ Up to 30% APY', highlight: true },
+                    { feature: 'NFT Strategies', etoro: '❌ None', traderama: '✅ Exclusive access', highlight: false },
+                    { feature: 'Ownership', etoro: 'Company', traderama: 'Community', highlight: true }
+                  ].map((row, idx) => (
+                    <tr key={idx} className="border-b border-purple-500/10">
+                      <td className="py-4 font-semibold">{row.feature}</td>
+                      <td className="py-4 text-center text-red-400">{row.etoro}</td>
+                      <td className={`py-4 text-center font-bold ${row.highlight ? 'text-green-400' : 'text-gray-300'}`}>
+                        {row.traderama}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+
+              <div className="mt-8 bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-2xl p-6 border border-purple-500/20 text-center">
+                <p className="text-2xl font-bold text-purple-300">
+                  Bottom Line: <span className="text-red-400">eToro makes THEM rich.</span>{' '}
+                  <span className="text-green-400">Traderama makes YOU rich.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">❓ Frequently Asked Questions</h2>
+            <p className="text-gray-400 text-lg">Everything You Need to Know</p>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-6">
+            {[
+              {
+                q: "Is this another pump-and-dump token?",
+                a: "No. KEM has real utility: copy trading access, staking rewards, governance, revenue sharing. The token is needed to use the platform."
+              },
+              {
+                q: "When can I start using Traderama Pro?",
+                a: "Beta launches Q2 2025 (3-4 months after presale). Genesis holders get early access."
+              },
+              {
+                q: "What if I don't know how to trade?",
+                a: "Perfect! That's the point. Copy strategies from verified profitable traders. Zero skill needed."
+              },
+              {
+                q: "Can I sell my KEM tokens anytime?",
+                a: "Yes, 50% unlocked at launch, 50% linear over 3 months. But why sell when you're earning rewards + revenue share?"
+              },
+              {
+                q: "Is there a maximum investment?",
+                a: "Yes, $5,000 max to prevent whales from dominating. We want decentralized ownership."
+              },
+              {
+                q: "What chains does Traderama support?",
+                a: "Launch: Polygon. 2025: Ethereum, BSC, Arbitrum. 2026: Solana, Base."
+              }
+            ].map((faq, idx) => (
+              <div key={idx} className="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all">
+                <h3 className="text-xl font-bold text-purple-300 mb-3">{faq.q}</h3>
+                <p className="text-gray-300 leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Take Action Section */}
+      <section className="py-20 bg-gradient-to-b from-transparent via-purple-950/30 to-transparent">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">🎯 You Have 3 Choices</h2>
+            <p className="text-gray-400 text-lg">What Will You Decide?</p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Choice 1 - Join Presale */}
+            <div className="bg-gradient-to-br from-green-900/40 to-emerald-900/40 backdrop-blur-lg p-8 rounded-3xl border-2 border-green-500/50 hover:transform hover:scale-105 transition-all relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-600 to-emerald-600 px-6 py-2 rounded-full text-sm font-bold">
+                BEST CHOICE
+              </div>
+              
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold mb-2 text-green-300">Choice 1: Join the Presale ✅</h3>
+              </div>
+
+              <ul className="space-y-3">
+                {[
+                  'Pay $0.008 per KEM',
+                  'Get Genesis Trader status',
+                  'Earn 10X rewards for 12 months',
+                  '3X-5X revenue share multiplier',
+                  '30% APY staking',
+                  'NFT strategy vault',
+                  'Become founding member'
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="text-green-400 text-xl mt-1">✓</span>
+                    <span className="text-gray-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Choice 2 - Wait for DEX */}
+            <div className="bg-gradient-to-br from-yellow-900/30 to-orange-900/30 backdrop-blur-lg p-8 rounded-3xl border border-yellow-500/30 hover:transform hover:scale-105 transition-all">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold mb-2 text-yellow-300">Choice 2: Wait for DEX Launch ⚠️</h3>
+              </div>
+
+              <ul className="space-y-3">
+                {[
+                  'Pay $0.010 per KEM (25% more expensive)',
+                  'No Genesis status',
+                  'Standard 1X rewards',
+                  '1X revenue share',
+                  '25% APY staking',
+                  'No NFT strategies',
+                  'Miss founding member benefits'
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="text-yellow-400 text-xl mt-1">⚠</span>
+                    <span className="text-gray-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Choice 3 - FOMO Later */}
+            <div className="bg-gradient-to-br from-red-900/30 to-red-950/30 backdrop-blur-lg p-8 rounded-3xl border border-red-500/30 hover:transform hover:scale-105 transition-all">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold mb-2 text-red-300">Choice 3: FOMO in 6 Months ❌</h3>
+              </div>
+
+              <ul className="space-y-3">
+                {[
+                  'Pay $0.050+ per KEM (500%+ more expensive)',
+                  'Platform already successful',
+                  'You missed 10X opportunity',
+                  'See others making $10K+ monthly',
+                  'Regret kicks in',
+                  '"I should have bought the presale..."'
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="text-red-400 text-xl mt-1">✗</span>
+                    <span className="text-gray-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Links */}
+      <section className="py-16 bg-gradient-to-b from-transparent via-purple-950/30 to-transparent">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold mb-4">Join Our Community</h2>
+            <p className="text-gray-400">Stay updated and connect with fellow traders</p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {[
+              { icon: '🦅', name: 'Twitter', link: 'https://twitter.com/TraderamaPro' },
+              { icon: '💬', name: 'Telegram', link: 'https://t.me/TraderamaPro' },
+              { icon: '👾', name: 'Discord', link: 'https://discord.gg/TraderamaPro' },
+              { icon: '🌐', name: 'Website', link: 'https://traderamapro.com' }
+            ].map((social, idx) => (
+              <Link 
+                key={idx}
+                href={social.link}
+                target="_blank"
+                className="bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-purple-500/20 hover:border-purple-500/50 transition-all hover:transform hover:scale-105 text-center">
+                <div className="text-5xl mb-4">{social.icon}</div>
+                <div className="font-bold text-purple-300">{social.name}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">❓ Frequently Asked Questions</h2>
+            <p className="text-gray-400 text-lg">Everything You Need to Know</p>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-6">
+            {[
+              {
+                q: "Is this another pump-and-dump token?",
+                a: "No. KEM has real utility: copy trading access, staking rewards, governance, revenue sharing. The token is needed to use the platform."
+              },
+              {
+                q: "When can I start using Traderama Pro?",
+                a: "Beta launches Q2 2025 (3-4 months after presale). Genesis holders get early access."
+              },
+              {
+                q: "What if I don't know how to trade?",
+                a: "Perfect! That's the point. Copy strategies from verified profitable traders. Zero skill needed."
+              },
+              {
+                q: "Can I sell my KEM tokens anytime?",
+                a: "Yes, 50% unlocked at launch, 50% linear over 3 months. But why sell when you're earning rewards + revenue share?"
+              },
+              {
+                q: "Is there a maximum investment?",
+                a: "Yes, $5,000 max to prevent whales from dominating. We want decentralized ownership."
+              },
+              {
+                q: "What chains does Traderama support?",
+                a: "Launch: Polygon. 2025: Ethereum, BSC, Arbitrum. 2026: Solana, Base."
+              }
+            ].map((faq, idx) => (
+              <div key={idx} className="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all">
+                <h3 className="text-xl font-bold text-purple-300 mb-3">{faq.q}</h3>
+                <p className="text-gray-300 leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Take Action Section */}
+      <section className="py-20 bg-gradient-to-b from-transparent via-purple-950/30 to-transparent">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">🎯 You Have 3 Choices</h2>
+            <p className="text-gray-400 text-lg">What Will You Decide?</p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Choice 1 - Join Presale */}
+            <div className="bg-gradient-to-br from-green-900/40 to-emerald-900/40 backdrop-blur-lg p-8 rounded-3xl border-2 border-green-500/50 hover:transform hover:scale-105 transition-all relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-600 to-emerald-600 px-6 py-2 rounded-full text-sm font-bold">
+                BEST CHOICE
+              </div>
+              
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold mb-2 text-green-300">Choice 1: Join the Presale ✅</h3>
+              </div>
+
+              <ul className="space-y-3">
+                {[
+                  'Pay $0.008 per KEM',
+                  'Get Genesis Trader status',
+                  'Earn 10X rewards for 12 months',
+                  '3X-5X revenue share multiplier',
+                  '30% APY staking',
+                  'NFT strategy vault',
+                  'Become founding member'
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="text-green-400 text-xl mt-1">✓</span>
+                    <span className="text-gray-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Choice 2 - Wait for DEX */}
+            <div className="bg-gradient-to-br from-yellow-900/30 to-orange-900/30 backdrop-blur-lg p-8 rounded-3xl border border-yellow-500/30 hover:transform hover:scale-105 transition-all">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold mb-2 text-yellow-300">Choice 2: Wait for DEX Launch ⚠️</h3>
+              </div>
+
+              <ul className="space-y-3">
+                {[
+                  'Pay $0.010 per KEM (25% more expensive)',
+                  'No Genesis status',
+                  'Standard 1X rewards',
+                  '1X revenue share',
+                  '25% APY staking',
+                  'No NFT strategies',
+                  'Miss founding member benefits'
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="text-yellow-400 text-xl mt-1">⚠</span>
+                    <span className="text-gray-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Choice 3 - FOMO Later */}
+            <div className="bg-gradient-to-br from-red-900/30 to-red-950/30 backdrop-blur-lg p-8 rounded-3xl border border-red-500/30 hover:transform hover:scale-105 transition-all">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold mb-2 text-red-300">Choice 3: FOMO in 6 Months ❌</h3>
+              </div>
+
+              <ul className="space-y-3">
+                {[
+                  'Pay $0.050+ per KEM (500%+ more expensive)',
+                  'Platform already successful',
+                  'You missed 10X opportunity',
+                  'See others making $10K+ monthly',
+                  'Regret kicks in',
+                  '"I should have bought the presale..."'
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="text-red-400 text-xl mt-1">✗</span>
+                    <span className="text-gray-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Links */}
+      <section className="py-16 bg-gradient-to-b from-transparent via-purple-950/30 to-transparent">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold mb-4">Join Our Community</h2>
+            <p className="text-gray-400">Stay updated and connect with fellow traders</p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {[
+              { icon: '🦅', name: 'Twitter', link: 'https://twitter.com/TraderamaPro' },
+              { icon: '💬', name: 'Telegram', link: 'https://t.me/TraderamaPro' },
+              { icon: '👾', name: 'Discord', link: 'https://discord.gg/TraderamaPro' },
+              { icon: '🌐', name: 'Website', link: 'https://traderamapro.com' }
+            ].map((social, idx) => (
+              <Link 
+                key={idx}
+                href={social.link}
+                target="_blank"
+                className="bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-purple-500/20 hover:border-purple-500/50 transition-all hover:transform hover:scale-105 text-center">
+                <div className="text-5xl mb-4">{social.icon}</div>
+                <div className="font-bold text-purple-300">{social.name}</div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
