@@ -1,9 +1,8 @@
 // app/page.tsx
 
-import React from 'react';
 // 1. Import the MDX file. Next.js treats this as a component.
 // The '@/' alias typically points to your project root. Adjust path if needed.
-import KemCoinContent from '@/app/content/KemCoinPresale';
+import KemCoinPresale from '@/app/content/KemCoinPresale';
 import Header from '@/app/content/Header';
 import Footer from '@/app/content/Footer';
 
@@ -18,11 +17,10 @@ export default function HomePage() {
       <Header />
       
       {/* 2. You might want a container to center the content, especially for a long landing page. */}
-      {/* Updated: Added overflow control and full width wrapper for better mobile responsiveness */}
-      <div className="w-full max-w-full overflow-x-hidden">
+      <div className="container max-w-4xl mx-auto px-4 py-10">
         
         {/* 3. Render the imported MDX content */}
-        <KemCoinContent />
+        <KemCoinPresale />
         
       </div>
       
