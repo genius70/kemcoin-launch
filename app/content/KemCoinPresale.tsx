@@ -1,15 +1,14 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-'use client';
+ 'use client';
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// DEVELOPER CONFIGURATION - Moved outside component to prevent re-creation on every render
+const PRESALE_START_DATE = new Date('2026-01-01T00:00:00Z'); // Set your presale start date
+const PRESALE_DURATION_DAYS = 7; // How many days the presale runs
+
 export default function KemCoinPresale() {
-  // DEVELOPER CONFIGURATION
-  const PRESALE_START_DATE = new Date('2026-01-01T00:00:00Z'); // Set your presale start date
-  const PRESALE_DURATION_DAYS = 7; // How many days the presale runs
-  
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -72,7 +71,7 @@ export default function KemCoinPresale() {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [PRESALE_START_DATE, PRESALE_DURATION_DAYS]);
+  }, []); // Empty dependency array - effect runs once on mount and cleans up on unmount
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-purple-950 to-slate-950 text-white">
