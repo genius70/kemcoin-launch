@@ -18,7 +18,8 @@ export default function HomePage() {
       <Header />
       
       {/* 2. You might want a container to center the content, especially for a long landing page. */}
-      <div className="container max-w-4xl mx-auto px-4 py-10">
+      {/* Updated: Added overflow control and full width wrapper for better mobile responsiveness */}
+      <div className="w-full max-w-full overflow-x-hidden">
         
         {/* 3. Render the imported MDX content */}
         <KemCoinContent />
