@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -5,31 +6,73 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function KemCoinPresale() {
+  // DEVELOPER CONFIGURATION
+  const PRESALE_START_DATE = new Date('2026-01-01T00:00:00Z'); // Set your presale start date
+  const PRESALE_DURATION_DAYS = 7; // How many days the presale runs
+  
   const [timeLeft, setTimeLeft] = useState({
-    days: 27,
+    days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0
   });
+  const [presaleStatus, setPresaleStatus] = useState<'upcoming' | 'live' | 'ended'>('upcoming');
 
   useEffect(() => {
+    const calculateTimeLeft = () => {
+      const now = new Date().getTime();
+      const startTime = PRESALE_START_DATE.getTime();
+      const endTime = startTime + (PRESALE_DURATION_DAYS * 24 * 60 * 60 * 1000);
+      
+      let status: 'upcoming' | 'live' | 'ended' = 'upcoming';
+      let timeData = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+      
+      // Check presale status
+      if (now < startTime) {
+        // Presale hasn't started yet - countdown to start
+        status = 'upcoming';
+        const difference = startTime - now;
+        
+        timeData = {
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((difference % (1000 * 60)) / 1000)
+        };
+      } else if (now >= startTime && now < endTime) {
+        // Presale is live - countdown to end
+        status = 'live';
+        const difference = endTime - now;
+        
+        timeData = {
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((difference % (1000 * 60)) / 1000)
+        };
+      } else {
+        // Presale has ended
+        status = 'ended';
+        timeData = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+      }
+      
+      return { status, timeData };
+    };
+
+    const updateCountdown = () => {
+      const { status, timeData } = calculateTimeLeft();
+      setPresaleStatus(status);
+      setTimeLeft(timeData);
+    };
+
+    updateCountdown(); // Initial call
+
     const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 };
-        } else if (prev.minutes > 0) {
-          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
-        } else if (prev.hours > 0) {
-          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        } else if (prev.days > 0) {
-          return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
-        }
-        return prev;
-      });
+      updateCountdown();
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [PRESALE_START_DATE, PRESALE_DURATION_DAYS]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-purple-950 to-slate-950 text-white">
@@ -50,7 +93,7 @@ export default function KemCoinPresale() {
               </span>
             </h1>
             <h2><span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-             Copy Experts • Earn Rewards • Share Profits
+             Copy-Trading Experts • Earn KEMCOIN (KEM) Rewards • Share in Platform Profits • Real Growth 
               </span></h2>
             <p className="text-2xl text-gray-300 mb-12">
               The Token That Pays You to Trade Smarter
@@ -94,26 +137,35 @@ export default function KemCoinPresale() {
       </section>
 
       {/* Countdown Timer */}
-      <section className="py-12 bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur-lg border-y border-purple-500/20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-6">
-            <h3 className="text-2xl font-bold mb-2">⏰ Presale Ends In</h3>
+<section className="py-12 bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur-lg border-y border-purple-500/20">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-6">
+      <h3 className="text-2xl font-bold mb-2">
+        {presaleStatus === 'upcoming' && '⏰ Presale Begins In'}
+        {presaleStatus === 'live' && '🔥 Presale Ends In'}
+        {presaleStatus === 'ended' && '✅ Presale Has Ended'}
+      </h3>
+      {presaleStatus === 'upcoming' && (
+        <p className="text-gray-400">Mark your calendar for January 1, 2026!</p>
+      )}
+    </div>
+    <div className="flex justify-center gap-4 md:gap-8">
+      {[
+        { label: 'Days', value: timeLeft.days },
+        { label: 'Hours', value: timeLeft.hours },
+        { label: 'Minutes', value: timeLeft.minutes },
+        { label: 'Seconds', value: timeLeft.seconds }
+      ].map((item) => (
+        <div key={item.label} className="bg-white/10 backdrop-blur-lg rounded-xl p-4 md:p-6 min-w-[80px] border border-purple-500/20">
+          <div className={`text-3xl md:text-5xl font-bold ${presaleStatus === 'live' ? 'text-green-400' : 'text-purple-400'}`}>
+            {String(item.value).padStart(2, '0')}
           </div>
-          <div className="flex justify-center gap-4 md:gap-8">
-            {[
-              { label: 'Days', value: timeLeft.days },
-              { label: 'Hours', value: timeLeft.hours },
-              { label: 'Minutes', value: timeLeft.minutes },
-              { label: 'Seconds', value: timeLeft.seconds }
-            ].map((item) => (
-              <div key={item.label} className="bg-white/10 backdrop-blur-lg rounded-xl p-4 md:p-6 min-w-[80px] border border-purple-500/20">
-                <div className="text-3xl md:text-5xl font-bold text-purple-400">{String(item.value).padStart(2, '0')}</div>
-                <div className="text-xs md:text-sm text-gray-400 mt-2">{item.label}</div>
-              </div>
-            ))}
-          </div>
+          <div className="text-xs md:text-sm text-gray-400 mt-2">{item.label}</div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Problem Section */}
       <section className="py-20">

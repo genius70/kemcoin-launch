@@ -4,6 +4,8 @@ import React from 'react';
 // 1. Import the MDX file. Next.js treats this as a component.
 // The '@/' alias typically points to your project root. Adjust path if needed.
 import KemCoinContent from '@/app/content/KemCoinPresale';
+import Header from '@/app/content/Header';
+import Footer from '@/app/content/Footer';
 
 // If you want to use custom components (like the KemCoinAlert from the previous step)
 // make sure to import them and define the provider/wrapper here, or globally in mdx-components.tsx
@@ -11,13 +13,21 @@ import KemCoinContent from '@/app/content/KemCoinPresale';
 
 export default function HomePage() {
   return (
-    // 2. You might want a container to center the content, especially for a long landing page.
-    <div className="container max-w-4xl mx-auto px-4 py-10">
+    <>
+      {/* Header component with presale links */}
+      <Header />
       
-      {/* 3. Render the imported MDX content */}
-      <KemCoinContent />
+      {/* 2. You might want a container to center the content, especially for a long landing page. */}
+      <div className="container max-w-4xl mx-auto px-4 py-10">
+        
+        {/* 3. Render the imported MDX content */}
+        <KemCoinContent />
+        
+      </div>
       
-    </div>
+      {/* Footer component with links and social icons */}
+      <Footer />
+    </>
   );
 }
 
