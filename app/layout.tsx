@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "KEMCOIN - PRESALE ",
-  description: "KEMCOIN - Invest in the Traderama Platform Utility Token",
+  description: "KEMCOIN - Traderama Platform Utility Token",
 };
 
 export default function RootLayout({

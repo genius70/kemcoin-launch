@@ -38,11 +38,11 @@ export default function Header() {
           </Link>
           
           <Link 
-            href="https://www.kemcoin.pro"
+            href="https://www.traderama.pro"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-6 py-2.5 rounded-xl text-sm font-bold transition-all hover:scale-110 shadow-xl hover:shadow-2xl hover:shadow-purple-500/50">
-            🔥 Join Pre-Sale
+            🔥 Traderama Pro
           </Link>
         </div>
       </div>
