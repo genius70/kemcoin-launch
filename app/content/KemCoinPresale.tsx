@@ -177,7 +177,7 @@ export default function KemCoinPresale() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: '💸', title: '95% of traders lose money going solo' },
-              { icon: '💰', title: 'Expert strategies cost $500-$5,000/month' },
+              { icon: '💰', title: 'Expert strategies cost $500-$5,000/mth' },
               { icon: '🤔', title: 'No way to verify if "gurus" actually profit' },
               { icon: '😤', title: 'You trade → Exchanges get rich → You get nothing' }
             ].map((problem, idx) => (
@@ -771,50 +771,6 @@ export default function KemCoinPresale() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">❓ Frequently Asked Questions</h2>
-            <p className="text-gray-400 text-lg">Everything You Need to Know</p>
-          </div>
-
-          <div className="max-w-4xl mx-auto space-y-6">
-            {[
-              {
-                q: "Is this another pump-and-dump token?",
-                a: "No. KEM has real utility: copy trading access, staking rewards, governance, revenue sharing. The token is needed to use the platform."
-              },
-              {
-                q: "When can I start using Traderama Pro?",
-                a: "Beta launches Q2 2025 (3-4 months after presale). Genesis holders get early access."
-              },
-              {
-                q: "What if I don't know how to trade?",
-                a: "Perfect! That's the point. Copy strategies from verified profitable traders. Zero skill needed."
-              },
-              {
-                q: "Can I sell my KEM tokens anytime?",
-                a: "Yes, 50% unlocked at launch, 50% linear over 3 months. But why sell when you're earning rewards + revenue share?"
-              },
-              {
-                q: "Is there a maximum investment?",
-                a: "Yes, $5,000 max to prevent whales from dominating. We want decentralized ownership."
-              },
-              {
-                q: "What chains does Traderama support?",
-                a: "Launch: Polygon. 2025: Ethereum, BSC, Arbitrum. 2026: Solana, Base."
-              }
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all">
-                <h3 className="text-xl font-bold text-purple-300 mb-3">{faq.q}</h3>
-                <p className="text-gray-300 leading-relaxed">{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Take Action Section */}
       <section className="py-20 bg-gradient-to-b from-transparent via-purple-950/30 to-transparent">
         <div className="container mx-auto px-4">
@@ -945,103 +901,6 @@ export default function KemCoinPresale() {
           </div>
         </div>
       </section>
-
-      {/* Take Action Section */}
-      <section className="py-20 bg-gradient-to-b from-transparent via-purple-950/30 to-transparent">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">🎯 You Have 3 Choices</h2>
-            <p className="text-gray-400 text-lg">What Will You Decide?</p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {/* Choice 1 - Join Presale */}
-            <div className="bg-gradient-to-br from-green-900/40 to-emerald-900/40 backdrop-blur-lg p-8 rounded-3xl border-2 border-green-500/50 hover:transform hover:scale-105 transition-all relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-600 to-emerald-600 px-6 py-2 rounded-full text-sm font-bold">
-                BEST CHOICE
-              </div>
-              
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-2 text-green-300">Choice 1: Join the Presale ✅</h3>
-              </div>
-
-              <ul className="space-y-3">
-                {[
-                  'Pay $0.008 per KEM',
-                  'Get Genesis Trader status',
-                  'Earn 10X rewards for 12 months',
-                  '3X-5X revenue share multiplier',
-                  '30% APY staking',
-                  'NFT strategy vault',
-                  'Become founding member'
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="text-green-400 text-xl mt-1">✓</span>
-                    <span className="text-gray-300">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Choice 2 - Wait for DEX */}
-            <div className="bg-gradient-to-br from-yellow-900/30 to-orange-900/30 backdrop-blur-lg p-8 rounded-3xl border border-yellow-500/30 hover:transform hover:scale-105 transition-all">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-2 text-yellow-300">Choice 2: Wait for DEX Launch ⚠️</h3>
-              </div>
-
-              <ul className="space-y-3">
-                {[
-                  'Pay $0.010 per KEM (25% more expensive)',
-                  'No Genesis status',
-                  'Standard 1X rewards',
-                  '1X revenue share',
-                  '25% APY staking',
-                  'No NFT strategies',
-                  'Miss founding member benefits'
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="text-yellow-400 text-xl mt-1">⚠</span>
-                    <span className="text-gray-300">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Choice 3 - FOMO Later */}
-            <div className="bg-gradient-to-br from-red-900/30 to-red-950/30 backdrop-blur-lg p-8 rounded-3xl border border-red-500/30 hover:transform hover:scale-105 transition-all">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-2 text-red-300">Choice 3: FOMO in 6 Months ❌</h3>
-              </div>
-
-              <ul className="space-y-3">
-                {[
-                  'Pay $0.050+ per KEM (500%+ more expensive)',
-                  'Platform already successful',
-                  'You missed 10X opportunity',
-                  'See others making $10K+ monthly',
-                  'Regret kicks in',
-                  '"I should have bought the presale..."'
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="text-red-400 text-xl mt-1">✗</span>
-                    <span className="text-gray-300">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-8 border-t border-purple-500/20">
-        <div className="container mx-auto px-4 text-center text-gray-400 text-sm">
-          <p>© 2025 KemCoin. All rights reserved.</p>
-          <p className="mt-2">
-            <span className="font-semibold text-yellow-400">Disclaimer:</span> Cryptocurrency investments carry risk. DYOR. Not financial advice.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
