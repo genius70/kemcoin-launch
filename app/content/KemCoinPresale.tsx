@@ -74,8 +74,8 @@ export default function KemCoinPresale() {
   }, []); // Empty dependency array - effect runs once on mount and cleans up on unmount
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-purple-950 to-slate-950 text-white">
-      
+    <><div className="min-h-screen bg-gradient-to-b from-slate-950 via-purple-950 to-slate-950 text-white">
+
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-20 pb-32">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20"></div>
@@ -84,16 +84,16 @@ export default function KemCoinPresale() {
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-2 rounded-full text-sm font-semibold mb-8 animate-pulse">
               🔥 PRESALE LIVE NOW
             </div>
-            
+
             <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
               Support KEMCOIN (KEM) PRE-SALE
               <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-              Powering Traderama Pro&apos;s Trading Revolution
+                Powering Traderama Pro&apos;s Trading Revolution
               </span>
             </h1>
             <h2><span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-             Copy-Trading Experts • Earn KEMCOIN (KEM) Rewards • Share in Platform Profits • Real Growth 
-              </span></h2>
+              Copy-Trading Experts • Earn KEMCOIN (KEM) Rewards • Share in Platform Profits • Real Growth
+            </span></h2>
             <p className="text-2xl text-gray-300 mb-12">
               The Token That Pays You to Trade Smarter
             </p>
@@ -120,13 +120,13 @@ export default function KemCoinPresale() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="#presale" 
+              <Link
+                href="#presale"
                 className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-2xl">
                 Join Presale Now →
               </Link>
-              <Link 
-                href="#benefits" 
+              <Link
+                href="#benefits"
                 className="bg-white/10 hover:bg-white/20 backdrop-blur-lg px-8 py-4 rounded-xl font-bold text-lg transition-all border border-white/20">
                 Learn More
               </Link>
@@ -136,44 +136,44 @@ export default function KemCoinPresale() {
       </section>
 
       {/* Countdown Timer */}
-<section className="py-12 bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur-lg border-y border-purple-500/20">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-6">
-      <h3 className="text-2xl font-bold mb-2">
-        {presaleStatus === 'upcoming' && '⏰ Presale Begins In'}
-        {presaleStatus === 'live' && '🔥 Presale Ends In'}
-        {presaleStatus === 'ended' && '✅ Presale Has Ended'}
-      </h3>
-      {presaleStatus === 'upcoming' && (
-        <p className="text-gray-400">Mark your calendar for January 1, 2026!</p>
-      )}
-    </div>
-    <div className="flex justify-center gap-4 md:gap-8">
-      {[
-        { label: 'Days', value: timeLeft.days },
-        { label: 'Hours', value: timeLeft.hours },
-        { label: 'Minutes', value: timeLeft.minutes },
-        { label: 'Seconds', value: timeLeft.seconds }
-      ].map((item) => (
-        <div key={item.label} className="bg-white/10 backdrop-blur-lg rounded-xl p-4 md:p-6 min-w-[80px] border border-purple-500/20">
-          <div className={`text-3xl md:text-5xl font-bold ${presaleStatus === 'live' ? 'text-green-400' : 'text-purple-400'}`}>
-            {String(item.value).padStart(2, '0')}
+      <section className="py-12 bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur-lg border-y border-purple-500/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-6">
+            <h3 className="text-2xl font-bold mb-2">
+              {presaleStatus === 'upcoming' && '⏰ Presale Begins In'}
+              {presaleStatus === 'live' && '🔥 Presale Ends In'}
+              {presaleStatus === 'ended' && '✅ Presale Has Ended'}
+            </h3>
+            {presaleStatus === 'upcoming' && (
+              <p className="text-gray-400">Mark your calendar for January 1, 2026!</p>
+            )}
           </div>
-          <div className="text-xs md:text-sm text-gray-400 mt-2">{item.label}</div>
+          <div className="flex justify-center gap-4 md:gap-8">
+            {[
+              { label: 'Days', value: timeLeft.days },
+              { label: 'Hours', value: timeLeft.hours },
+              { label: 'Minutes', value: timeLeft.minutes },
+              { label: 'Seconds', value: timeLeft.seconds }
+            ].map((item) => (
+              <div key={item.label} className="bg-white/10 backdrop-blur-lg rounded-xl p-4 md:p-6 min-w-[80px] border border-purple-500/20">
+                <div className={`text-3xl md:text-5xl font-bold ${presaleStatus === 'live' ? 'text-green-400' : 'text-purple-400'}`}>
+                  {String(item.value).padStart(2, '0')}
+                </div>
+                <div className="text-xs md:text-sm text-gray-400 mt-2">{item.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Problem Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">📉 The Problem</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">📉 The Problems KEMCOIN (KEM) Token Solve</h2>
             <p className="text-gray-400 text-lg">Why Most Traders Lose Money</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: '💸', title: '95% of traders lose money going solo' },
@@ -197,7 +197,7 @@ export default function KemCoinPresale() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4">💡 The Traderama Pro Solution</h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">Copy winning strategies, earn rewards, and build wealth automatically</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {[
               { icon: '🎯', title: 'Copy Proven Traders', desc: 'Automatically copy profitable strategies from verified traders' },
@@ -226,18 +226,17 @@ export default function KemCoinPresale() {
       {/* Benefits Section */}
       <section id="benefits" className="py-20">
         <div className="container mx-auto px-4">
-        <div className="flex justify-center mb-8">
-  <div className="text-center">
-    <Image 
-      src="/kemcoin-presale-logo.png" 
-      alt="KEM - Crypto Goddess of Success"
-      width={200}
-      height={200}
-      className="mx-auto mb-4"
-    />
-    <p className="text-gray-400 text-sm italic">KEM - Crypto Goddess of Success</p>
-  </div>
-</div>
+          <div className="flex justify-center mb-8">
+            <div className="text-center">
+              <Image
+                src="/kemcoin-presale-logo.png"
+                alt="KEM - Crypto Goddess of Success"
+                width={200}
+                height={200}
+                className="mx-auto mb-4" />
+              <p className="text-gray-400 text-sm italic">KEM - Crypto Goddess of Success</p>
+            </div>
+          </div>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">💎 Presale Exclusive Benefits</h2>
             <p className="text-gray-400 text-lg">Why Buy KEM in Presale?</p>
@@ -253,7 +252,7 @@ export default function KemCoinPresale() {
                   <p className="text-xl text-gray-300">LIFETIME VIP</p>
                 </div>
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 {[
                   'Unlimited strategy copying (normally $99/mo)',
@@ -395,7 +394,7 @@ export default function KemCoinPresale() {
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-2 rounded-full text-sm font-bold">
                 MOST POPULAR
               </div>
-              
+
               <div className="text-center mb-6">
                 <div className="text-5xl mb-4">🥈</div>
                 <h3 className="text-2xl font-bold mb-2">Silver Founder</h3>
@@ -495,7 +494,7 @@ export default function KemCoinPresale() {
             </div>
 
             <div className="text-center">
-              <Link 
+              <Link
                 href="https://gempad.app/presale/kemcoin"
                 target="_blank"
                 className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-12 py-6 rounded-xl font-bold text-2xl transition-all transform hover:scale-105 shadow-2xl">
@@ -785,7 +784,7 @@ export default function KemCoinPresale() {
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-600 to-emerald-600 px-6 py-2 rounded-full text-sm font-bold">
                 BEST CHOICE
               </div>
-              
+
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold mb-2 text-green-300">Choice 1: Join the Presale ✅</h3>
               </div>
@@ -891,6 +890,22 @@ export default function KemCoinPresale() {
               {
                 q: "What chains does Traderama support?",
                 a: "Launch: Polygon. 2025: Ethereum, BSC, Arbitrum. 2026: Solana, Base."
+              },
+              {
+                q: "How does KEM maintain its value?",
+                a: "KEM value is supported by real platform revenue (trading fees, subscription models), token burns from transaction fees, and increasing demand as more users need KEM to access premium features. Plus, 30-50% of platform profits go back to KEM holders through revenue sharing."
+              },
+              {
+                q: "What gives KEM tokens real utility on Traderama Pro?",
+                a: "KEM is required to unlock Genesis Trader features, copy premium strategies, earn 10X rewards multipliers, participate in governance votes, and receive quarterly revenue share distributions. More platform usage = more KEM demand."
+              },
+              {
+                q: "How do the action rewards work?",
+                a: "Every action on Traderama Pro earns you KEM tokens: copying trades, sharing strategies, daily logins, completing educational modules, referring traders, and winning contests. Genesis holders earn 10X more rewards for 12 months, creating continuous buy pressure."
+              },
+              {
+                q: "Will KEM price increase over time?",
+                a: "While we can't guarantee price, KEM has multiple value drivers: limited supply with token burns, growing platform user base requiring KEM for features, revenue sharing making holding attractive, and deflationary tokenomics. As Traderama grows, demand for KEM should increase naturally."
               }
             ].map((faq, idx) => (
               <div key={idx} className="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all">
@@ -902,5 +917,9 @@ export default function KemCoinPresale() {
         </div>
       </section>
     </div>
+    <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">⚡ Come Join The Community</h2>
+        <p className="text-gray-400 text-lg">Earn Crypto from Traderama Copy Trading Platform</p>
+      </div></>
   );
 }

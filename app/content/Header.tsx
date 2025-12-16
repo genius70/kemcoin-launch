@@ -38,11 +38,19 @@ export default function Header() {
           </Link>
           
           <Link 
-            href="https://www.kemcoin.pro"
+            href="https://pinksale.finance/"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-3 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold transition-all hover:scale-110 shadow-xl whitespace-nowrap">
-            🔥 Pre-Sale
+            🔥 PinkSale
+          </Link>
+
+          <Link 
+            href="https://gempad.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-3 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold transition-all hover:scale-110 shadow-xl whitespace-nowrap">
+            🔥 GemPad
           </Link>
         </div>
       </div>
