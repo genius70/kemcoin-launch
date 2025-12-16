@@ -18,7 +18,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white/5 backdrop-blur-lg hover:bg-white/10 border border-purple-500/30 hover:border-purple-500/50 px-2 sm:px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-semibold transition-all hover:scale-105 whitespace-nowrap">
-            ⭐ NextBig
+            ⭐ NextBigProduct
           </Link>
           
           <Link 
@@ -34,7 +34,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-blue-600/30 to-cyan-600/30 hover:from-blue-600/50 hover:to-cyan-600/50 border border-blue-500/30 hover:border-blue-500/50 px-2 sm:px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-xs sm:text-sm font-semibold transition-all hover:scale-105 whitespace-nowrap">
-            📄 Docs
+            📄 White Paper
           </Link>
           
           <Link 

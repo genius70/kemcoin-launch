@@ -902,34 +902,6 @@ export default function KemCoinPresale() {
         </div>
       </section>
 
-      {/* Social Links */}
-      <section className="py-16 bg-gradient-to-b from-transparent via-purple-950/30 to-transparent">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold mb-4">Join Our Community</h2>
-            <p className="text-gray-400">Stay updated and connect with fellow traders</p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {[
-              { icon: '🦅', name: 'Twitter', link: 'https://twitter.com/TraderamaPro' },
-              { icon: '💬', name: 'Telegram', link: 'https://t.me/TraderamaPro' },
-              { icon: '👾', name: 'Discord', link: 'https://discord.gg/TraderamaPro' },
-              { icon: '🌐', name: 'Website', link: 'https://traderamapro.com' }
-            ].map((social, idx) => (
-              <Link 
-                key={idx}
-                href={social.link}
-                target="_blank"
-                className="bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-purple-500/20 hover:border-purple-500/50 transition-all hover:transform hover:scale-105 text-center">
-                <div className="text-5xl mb-4">{social.icon}</div>
-                <div className="font-bold text-purple-300">{social.name}</div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -1057,62 +1029,6 @@ export default function KemCoinPresale() {
                 ))}
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Social Links */}
-      <section className="py-16 bg-gradient-to-b from-transparent via-purple-950/30 to-transparent">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold mb-4">Join Our Community</h2>
-            <p className="text-gray-400">Stay updated and connect with fellow traders</p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {[
-              { icon: '🦅', name: 'Twitter', link: 'https://twitter.com/TraderamaPro' },
-              { icon: '💬', name: 'Telegram', link: 'https://t.me/TraderamaPro' },
-              { icon: '👾', name: 'Discord', link: 'https://discord.gg/TraderamaPro' },
-              { icon: '🌐', name: 'Website', link: 'https://traderamapro.com' }
-            ].map((social, idx) => (
-              <Link 
-                key={idx}
-                href={social.link}
-                target="_blank"
-                className="bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-purple-500/20 hover:border-purple-500/50 transition-all hover:transform hover:scale-105 text-center">
-                <div className="text-5xl mb-4">{social.icon}</div>
-                <div className="font-bold text-purple-300">{social.name}</div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Social Links */}
-      <section className="py-16 bg-gradient-to-b from-transparent via-purple-950/30 to-transparent">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold mb-4">Join Our Community</h2>
-            <p className="text-gray-400">Stay updated and connect with fellow traders</p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {[
-              { icon: '🐦', name: 'Twitter', link: 'https://twitter.com/TraderamaPro' },
-              { icon: '💬', name: 'Telegram', link: 'https://t.me/TraderamaPro' },
-              { icon: '👾', name: 'Discord', link: 'https://discord.gg/TraderamaPro' },
-              { icon: '🌐', name: 'Website', link: 'https://traderamapro.com' }
-            ].map((social, idx) => (
-              <Link 
-                key={idx}
-                href={social.link}
-                target="_blank"
-                className="bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-purple-500/20 hover:border-purple-500/50 transition-all hover:transform hover:scale-105 text-center">
-                <div className="text-5xl mb-4">{social.icon}</div>
-                <div className="font-bold text-purple-300">{social.name}</div>
-              </Link>
-            ))}
           </div>
         </div>
       </section>
