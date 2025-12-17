@@ -92,31 +92,112 @@ export default function KemCoinPresale() {
               </span>
             </h1>
             <h2><span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-              Copy-Trading Experts • Earn KEMCOIN (KEM) Rewards • Share in Platform Profits • Real Growth
+              Copy-Trading Experts • Earn KEMCOIN (KEM) Rewards • Share Platform Profits • Grow Wealth Portfolio
             </span></h2>
             <p className="text-2xl text-gray-300 mb-12">
               The Token That Pays You to Trade Smarter
             </p>
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-purple-500/20">
-                <div className="text-3xl font-bold text-purple-400">$0.00845592</div>
-                <div className="text-sm text-gray-400 mt-2">Presale Price</div>
-              </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-purple-500/20">
-                <div className="text-3xl font-bold text-green-400">300% +</div>
-                <div className="text-sm text-gray-400 mt-2">Launch Gain</div>
-              </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-purple-500/20">
-                <div className="text-3xl font-bold text-blue-400">30%</div>
-                <div className="text-sm text-gray-400 mt-2">APY Staking</div>
-              </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-purple-500/20">
-                <div className="text-3xl font-bold text-yellow-400">10X</div>
-                <div className="text-sm text-gray-400 mt-2">Rewards Boost</div>
-              </div>
-            </div>
+            {/* 📈 Token Price Ladder & ROI with Dynamic Progress Bar */}
+<div className="mb-12">
+  {(() => {
+    // Dynamic Logic Calculations
+    const ROUND_DURATION = 5 * 24 * 60 * 60 * 1000; // 5 days in ms
+    const r1Start = PRESALE_START_DATE;
+    const r2Start = new Date(r1Start.getTime() + ROUND_DURATION);
+    const r3Start = new Date(r2Start.getTime() + ROUND_DURATION);
+    const listingStart = new Date(r3Start.getTime() + ROUND_DURATION);
+    
+    const now = new Date();
+    
+    // Determine progress and current status
+    let progress = '0%';
+    let currentPhase = 'Upcoming';
+    let activeRound = 0; // 1, 2, 3 or 4 (listing)
+
+    if (now >= listingStart) { progress = '100%'; currentPhase = 'Launched'; activeRound = 4; }
+    else if (now >= r3Start) { progress = '75%'; currentPhase = 'Round 3'; activeRound = 3; }
+    else if (now >= r2Start) { progress = '50%'; currentPhase = 'Round 2'; activeRound = 2; }
+    else if (now >= r1Start) { progress = '25%'; currentPhase = 'Round 1'; activeRound = 1; }
+
+    return (
+      <>
+        <div className="flex justify-between items-end mb-6">
+          <div>
+            <h3 className="text-xl font-semibold text-white flex items-center gap-2">
+              <span className="text-purple-500">📈</span> Token Price Ladder & ROI
+            </h3>
+            <p className="text-sm text-gray-400 mt-1">Automatic price increases every 5 days</p>
+          </div>
+          <div className="text-right">
+            <span className="text-xs font-bold uppercase tracking-widest text-purple-400">
+              Current Status: {currentPhase}
+            </span>
+          </div>
+        </div>
+
+        {/* Multi-Stage Progress Bar */}
+        <div className="relative mb-10 px-2">
+          <div className="h-3 w-full bg-white/5 rounded-full overflow-hidden border border-white/10">
+            <div 
+              className="h-full bg-gradient-to-r from-purple-600 via-blue-500 to-green-400 shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all duration-1000 ease-out"
+              style={{ width: progress }} 
+            ></div>
+          </div>
+          <div className="absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-0">
+            {[r1Start, r2Start, r3Start, listingStart].map((date, i) => (
+              <div 
+                key={i}
+                className={`w-5 h-5 rounded-full border-4 border-[#0f172a] transition-all duration-500 ${
+                  now >= date ? 'bg-purple-500 shadow-[0_0_10px_#a855f7]' : 'bg-gray-700'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Interactive Round Buttons */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          
+          {/* Round 1 */}
+          <div className={`relative flex flex-col items-start p-5 rounded-2xl transition-all duration-300 ${activeRound === 1 ? 'bg-purple-900/30 border-2 border-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.15)] scale-105' : 'bg-white/5 border border-white/10 opacity-60'}`}>
+            {activeRound === 1 && <div className="absolute -top-3 left-4 px-2 py-0.5 bg-purple-500 text-[10px] font-black text-white rounded uppercase italic">Live Now</div>}
+            <div className="text-xs font-bold uppercase tracking-wider text-purple-300 mb-1">Round 1</div>
+            <div className="text-lg font-bold text-white">$0.00211398</div>
+            <div className="text-[10px] text-gray-400 mt-1">Starts: {r1Start.toLocaleDateString()}</div>
+            <div className="mt-3 inline-flex items-center px-2 py-1 rounded bg-green-500/20 text-green-400 text-xs font-bold">300% ROI</div>
+          </div>
+
+          {/* Round 2 */}
+          <div className={`relative flex flex-col items-start p-5 rounded-2xl transition-all duration-300 ${activeRound === 2 ? 'bg-purple-900/30 border-2 border-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.15)] scale-105' : 'bg-white/5 border border-white/10 opacity-60'}`}>
+            {activeRound === 2 && <div className="absolute -top-3 left-4 px-2 py-0.5 bg-purple-500 text-[10px] font-black text-white rounded uppercase italic">Live Now</div>}
+            <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Round 2</div>
+            <div className="text-lg font-bold text-white">$0.00422796</div>
+            <div className="text-[10px] text-gray-400 mt-1">Starts: {r2Start.toLocaleDateString()}</div>
+            <div className="mt-3 inline-flex items-center px-2 py-1 rounded bg-white/10 text-gray-400 text-xs font-bold">100% ROI</div>
+          </div>
+
+          {/* Round 3 */}
+          <div className={`relative flex flex-col items-start p-5 rounded-2xl transition-all duration-300 ${activeRound === 3 ? 'bg-purple-900/30 border-2 border-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.15)] scale-105' : 'bg-white/5 border border-white/10 opacity-60'}`}>
+            {activeRound === 3 && <div className="absolute -top-3 left-4 px-2 py-0.5 bg-purple-500 text-[10px] font-black text-white rounded uppercase italic">Live Now</div>}
+            <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Round 3</div>
+            <div className="text-lg font-bold text-white">$0.00630720</div>
+            <div className="text-[10px] text-gray-400 mt-1">Starts: {r3Start.toLocaleDateString()}</div>
+            <div className="mt-3 inline-flex items-center px-2 py-1 rounded bg-white/10 text-gray-400 text-xs font-bold">34.1% ROI</div>
+          </div>
+
+          {/* Public Listing */}
+          <div className={`relative flex flex-col items-start p-5 rounded-2xl transition-all duration-300 ${activeRound === 4 ? 'bg-blue-900/30 border-2 border-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.15)] scale-105' : 'bg-gradient-to-br from-blue-600/10 to-purple-600/10 border border-blue-500/30 opacity-60'}`}>
+            <div className="text-xs font-bold uppercase tracking-wider text-blue-400 mb-1">DEX Listing</div>
+            <div className="text-lg font-bold text-white">$0.00845592</div>
+            <div className="text-[10px] text-gray-400 mt-1">Launch: {listingStart.toLocaleDateString()}</div>
+            <div className="mt-3 text-[10px] text-blue-400 font-bold uppercase">🚀 Moon Mission</div>
+          </div>
+        </div>
+      </>
+    );
+  })()}
+</div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
