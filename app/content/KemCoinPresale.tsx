@@ -101,11 +101,11 @@ export default function KemCoinPresale() {
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-purple-500/20">
-                <div className="text-3xl font-bold text-purple-400">$0.008</div>
+                <div className="text-3xl font-bold text-purple-400">$0.00845592</div>
                 <div className="text-sm text-gray-400 mt-2">Presale Price</div>
               </div>
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-purple-500/20">
-                <div className="text-3xl font-bold text-green-400">25%</div>
+                <div className="text-3xl font-bold text-green-400">300% +</div>
                 <div className="text-sm text-gray-400 mt-2">Launch Gain</div>
               </div>
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-purple-500/20">
@@ -176,7 +176,7 @@ export default function KemCoinPresale() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: '💸', title: '95% of traders lose money going solo' },
+              { icon: '💸', title: '95% of traders lose money going solo without real support' },
               { icon: '💰', title: 'Expert strategies cost $500-$5,000/mth' },
               { icon: '🤔', title: 'No way to verify if "gurus" actually profit' },
               { icon: '😤', title: 'You trade → Exchanges get rich → You get nothing' }
