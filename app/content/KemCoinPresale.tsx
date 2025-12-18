@@ -164,7 +164,7 @@ export default function KemCoinPresale() {
             {activeRound === 1 && <div className="absolute -top-3 left-4 px-2 py-0.5 bg-purple-500 text-[10px] font-black text-white rounded uppercase italic">Live Now</div>}
             <div className="text-xs font-bold uppercase tracking-wider text-purple-300 mb-1">Round 1</div>
             <div className="text-lg font-bold text-white">$0.00211398</div>
-            <div className="text-[10px] text-gray-400 mt-1">Starts: {r1Start.toLocaleDateString()}</div>
+            <div className="text-[10px] text-gray-400 mt-1">Starts: {r1Start.toLocaleDateString('en-US')}</div>
             <div className="mt-3 inline-flex items-center px-2 py-1 rounded bg-green-500/20 text-green-400 text-xs font-bold">300% ROI</div>
           </div>
 
@@ -173,7 +173,7 @@ export default function KemCoinPresale() {
             {activeRound === 2 && <div className="absolute -top-3 left-4 px-2 py-0.5 bg-purple-500 text-[10px] font-black text-white rounded uppercase italic">Live Now</div>}
             <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Round 2</div>
             <div className="text-lg font-bold text-white">$0.00422796</div>
-            <div className="text-[10px] text-gray-400 mt-1">Starts: {r2Start.toLocaleDateString()}</div>
+            <div className="text-[10px] text-gray-400 mt-1">Starts: {r2Start.toLocaleDateString('en-us')}</div>
             <div className="mt-3 inline-flex items-center px-2 py-1 rounded bg-white/10 text-gray-400 text-xs font-bold">100% ROI</div>
           </div>
 
@@ -182,7 +182,7 @@ export default function KemCoinPresale() {
             {activeRound === 3 && <div className="absolute -top-3 left-4 px-2 py-0.5 bg-purple-500 text-[10px] font-black text-white rounded uppercase italic">Live Now</div>}
             <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">Round 3</div>
             <div className="text-lg font-bold text-white">$0.00630720</div>
-            <div className="text-[10px] text-gray-400 mt-1">Starts: {r3Start.toLocaleDateString()}</div>
+            <div className="text-[10px] text-gray-400 mt-1">Starts: {r3Start.toLocaleDateString('en-us')}</div>
             <div className="mt-3 inline-flex items-center px-2 py-1 rounded bg-white/10 text-gray-400 text-xs font-bold">34.1% ROI</div>
           </div>
 
@@ -190,7 +190,7 @@ export default function KemCoinPresale() {
           <div className={`relative flex flex-col items-start p-5 rounded-2xl transition-all duration-300 ${activeRound === 4 ? 'bg-blue-900/30 border-2 border-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.15)] scale-105' : 'bg-gradient-to-br from-blue-600/10 to-purple-600/10 border border-blue-500/30 opacity-60'}`}>
             <div className="text-xs font-bold uppercase tracking-wider text-blue-400 mb-1">DEX Listing</div>
             <div className="text-lg font-bold text-white">$0.00845592</div>
-            <div className="text-[10px] text-gray-400 mt-1">Launch: {listingStart.toLocaleDateString()}</div>
+            <div className="text-[10px] text-gray-400 mt-1">Launch: {listingStart.toLocaleDateString('en-us')}</div>
             <div className="mt-3 text-[10px] text-blue-400 font-bold uppercase">🚀 Moon Mission</div>
           </div>
         </div>
