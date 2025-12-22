@@ -1,21 +1,66 @@
-// next.config.mjs
-
-import createMDX from '@next/mdx'
+// next.config.ts
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Configure `pageExtensions` to include MDX, Markdown, and TSX files
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-  // Add any other Next.js config here (e.g., images, webpack, etc.)
+  // Default page extensions
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
+
+  // Allow all external images currently used in your sections
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '4irelabs.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cheqd.io',  // <-- This fixes the current error
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tokenbrice.xyz',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'miro.medium.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'preview.redd.it',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.redd.it',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'external-preview.redd.it',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'globalextramoney.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'dwptxtcjzzofa.cloudfront.net',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'public.bnbstatic.com',
+        pathname: '/**',
+      },
+      // Add more if you introduce new external images later
+    ],
+  },
 }
 
-const withMDX = createMDX({
-  // You can add remark or rehype plugins here if needed (e.g., for syntax highlighting, TOC generation, etc.)
-  options: {
-    // Example: To support GitHub Flavored Markdown
-    // remarkPlugins: [require('remark-gfm')], 
-  }
-})
-
-// Merge MDX config with Next.js config
-export default withMDX(nextConfig)
+export default nextConfig
