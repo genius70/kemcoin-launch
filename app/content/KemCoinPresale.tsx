@@ -108,9 +108,9 @@ export default function KemCoinPresale() {
           <p className="text-gray-400 text-lg mb-8">Earn Crypto from Traderama Copy Trading Platform</p>
           <div className="flex justify-center gap-6">
             {/* Add your social links here */}
-            <Link href="https://t.me/kemcoin" className="text-2xl hover:text-purple-400">Telegram</Link>
-            <Link href="https://twitter.com/kemcoin" className="text-2xl hover:text-purple-400">Twitter</Link>
-            <Link href="https://discord.gg/kemcoin" className="text-2xl hover:text-purple-400">Discord</Link>
+            <Link href="https://t.me/traderama" className="text-2xl hover:text-purple-400">Telegram</Link>
+            <Link href="https://x.com/traderama" className="text-2xl hover:text-purple-400">Twitter</Link>
+            <Link href="https://discord.gg/traderama" className="text-2xl hover:text-purple-400">Discord</Link>
           </div>
         </section>
       </div>

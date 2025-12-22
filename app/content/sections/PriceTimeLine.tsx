@@ -2,8 +2,8 @@
 // components/sections/PriceTimeline.tsx
 import { useEffect, useState } from 'react';
 
-const PRESALE_START_DATE = new Date('2026-01-01T00:00:00Z');
-const PRESALE_DURATION_DAYS = 7;
+const PRESALE_START_DATE = new Date('2026-03-01T00:00:00Z');
+const PRESALE_DURATION_DAYS = 15;
 
 export default function PriceTimeLine() {
   const [currentPhase, setCurrentPhase] = useState<'private' | 'presale' | 'dex'>('private');
@@ -49,7 +49,7 @@ export default function PriceTimeLine() {
         <div className={`p-6 rounded-2xl border ${currentPhase === 'private' ? 'bg-purple-900/30 border-purple-500 shadow-lg scale-105' : 'bg-white/5 border-white/10 opacity-70'}`}>
           {currentPhase === 'private' && <div className="absolute -top-3 left-4 px-3 py-1 bg-purple-500 text-xs font-bold rounded uppercase">Active</div>}
           <div className="text-sm uppercase text-purple-300 mb-2">Private Sale</div>
-          <div className="text-2xl font-bold">$0.0025</div>
+          <div className="text-2xl font-bold">$0.00211</div>
           <div className="text-xs text-gray-400 mt-2">Ended / Limited Access</div>
           <div className="mt-4 text-green-400 text-sm font-bold">Best Entry Price</div>
         </div>
@@ -58,15 +58,15 @@ export default function PriceTimeLine() {
         <div className={`p-6 rounded-2xl border ${currentPhase === 'presale' ? 'bg-purple-900/30 border-purple-500 shadow-lg scale-105' : currentPhase === 'private' ? 'bg-white/5 border-white/10 opacity-70' : 'bg-white/5 border-white/10'}`}>
           {currentPhase === 'presale' && <div className="absolute -top-3 left-4 px-3 py-1 bg-green-500 text-xs font-bold rounded uppercase">Live Now 🔥</div>}
           <div className="text-sm uppercase text-purple-300 mb-2">Public Presale</div>
-          <div className="text-2xl font-bold">$0.0040</div>
-          <div className="text-xs text-gray-400 mt-2">Jan 1 - Jan 8, 2026</div>
+          <div className="text-2xl font-bold">$0.00422</div>
+          <div className="text-xs text-gray-400 mt-2">Mar 1 - Mar 15, 2026</div>
           <div className="mt-4 text-green-400 text-sm font-bold">60% Higher than Private</div>
         </div>
 
         {/* DEX Listing */}
         <div className={`p-6 rounded-2xl border ${currentPhase === 'dex' ? 'bg-blue-900/30 border-blue-500 shadow-lg scale-105' : 'bg-gradient-to-br from-blue-600/10 to-purple-600/10 border-blue-500/30 opacity-70'}`}>
           <div className="text-sm uppercase text-blue-400 mb-2">DEX Listing</div>
-          <div className="text-2xl font-bold">$0.0080</div>
+          <div className="text-2xl font-bold">$0.008455</div>
           <div className="text-xs text-gray-400 mt-2">Public Launch</div>
           <div className="mt-4 text-blue-400 text-sm font-bold uppercase">🚀 Fair Launch Price</div>
         </div>

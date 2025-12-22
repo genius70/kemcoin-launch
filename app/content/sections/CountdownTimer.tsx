@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 
-const PRESALE_START_DATE = new Date('2026-01-01T00:00:00Z');
-const PRESALE_DURATION_DAYS = 7;
+const PRESALE_START_DATE = new Date('2026-03-01T00:00:00Z');
+const PRESALE_DURATION_DAYS = 15;
 
 export default function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState({
@@ -56,7 +56,7 @@ export default function CountdownTimer() {
             {presaleStatus === 'ended' && '✅ Presale Has Ended'}
           </h3>
           {presaleStatus === 'upcoming' && (
-            <p className="text-gray-400">Mark your calendar for January 1, 2026!</p>
+            <p className="text-gray-400">Mark your calendar for March 1, 2026!</p>
           )}
         </div>
         <div className="flex justify-center gap-4 md:gap-8">
