@@ -1,7 +1,62 @@
 // components/sections/KemTokenDistribution.tsx
-import Image from 'next/image';
+import { Pie } from 'react-chartjs-2';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, TooltipItem } from 'chart.js';
+
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function KemTokenDistribution() {
+  const chartData = {
+    labels: [
+      'Private Sale (11.8%)',
+      'Presale (10.0%)',
+      'Liquidity Pools (30.0%)',
+      'Platform Contract (36.9%)',
+      'Ecosystem/Marketing (10.0%)',
+      'Team & Operations (1.3%)',
+    ],
+    datasets: [
+      {
+        data: [118000000, 100000000, 300000000, 369280000, 100000000, 12720000],
+        backgroundColor: [
+          '#A855F7', // Purple
+          '#EC4899', // Pink
+          '#3B82F6', // Blue
+          '#10B981', // Green
+          '#EAB308', // Yellow
+          '#EF4444', // Red
+        ],
+        borderColor: '#1E293B',
+        borderWidth: 2,
+      },
+    ],
+  };
+
+  const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'right' as const,
+        labels: {
+          color: '#D1D5DB',
+          font: {
+            size: 14,
+          },
+        },
+      },
+      tooltip: {
+        callbacks: {
+          label: (tooltipItem: TooltipItem<'pie'>): string => {
+            const label = tooltipItem.label || '';
+            const value = tooltipItem.raw as number;
+            const percentage = ((value / 1000000000) * 100).toFixed(1);
+            return `${label}: ${value.toLocaleString()} KEM (${percentage}%)`;
+          },
+        },
+      },
+    },
+  };
+
   return (
     <section id="tokenomics" className="py-20 bg-gradient-to-b from-transparent via-purple-950/30 to-transparent">
       <div className="container mx-auto px-4">
@@ -10,43 +65,29 @@ export default function KemTokenDistribution() {
           <p className="text-gray-400 text-lg">Fully transparent allocation • No team dumps • Locked liquidity</p>
         </div>
 
-        {/* Full-width layout with vertical stacking on mobile, side-by-side on large screens */}
-        <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-start">
+        <div className="flex flex-col gap-16 max-w-5xl mx-auto">
           {/* Token Supply Allocation Chart */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-purple-500/20">
-            <h3 className="text-2xl font-bold text-purple-300 mb-8 text-center">
+          <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-10 border border-purple-500/20">
+            <h3 className="text-3xl font-bold text-purple-300 mb-10 text-center">
               Token Supply Allocation Chart
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <Image
-                src="https://4irelabs.com/wp-content/uploads/2024/01/125-2.png"
-                alt="Tokenomics Pie Chart Example 1"
-                width={600}
-                height={400}
-                className="rounded-xl w-full h-auto"
-              />
-              <Image
-                src="https://cheqd.io/wp-content/uploads/2022/06/cheqds-tokenomics-for-SSI-split-pie-chart-1.png"
-                alt="Tokenomics Pie Chart Example 2"
-                width={600}
-                height={400}
-                className="rounded-xl w-full h-auto"
-              />
+            <div className="w-full h-[500px] max-w-[800px] mx-auto">
+              <Pie data={chartData} options={chartOptions} />
             </div>
           </div>
 
           {/* Detailed Breakdown Table */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-purple-500/20 overflow-x-auto">
-            <h3 className="text-2xl font-bold text-purple-300 mb-8 text-center">
+          <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-10 border border-purple-500/20 overflow-x-auto">
+            <h3 className="text-3xl font-bold text-purple-300 mb-10 text-center">
               Detailed Breakdown
             </h3>
-            <table className="w-full text-left text-sm">
+            <table className="w-full text-left text-base">
               <thead>
                 <tr className="border-b border-purple-500/30">
-                  <th className="py-3">Category</th>
-                  <th className="py-3 text-right">Tokens</th>
-                  <th className="py-3 text-right">%</th>
-                  <th className="py-3">Notes</th>
+                  <th className="py-4">Category</th>
+                  <th className="py-4 text-right">Tokens</th>
+                  <th className="py-4 text-right">%</th>
+                  <th className="py-4">Notes</th>
                 </tr>
               </thead>
               <tbody className="text-gray-300">
@@ -88,7 +129,7 @@ export default function KemTokenDistribution() {
                 </tr>
               </tbody>
             </table>
-            <p className="mt-8 text-green-400 font-bold text-center text-xl">
+            <p className="mt-10 text-green-400 font-bold text-center text-2xl">
               Total Supply: 1,000,000,000 KEM
             </p>
           </div>
