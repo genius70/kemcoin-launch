@@ -26,7 +26,7 @@ export default function FAQSection() {
     },
     { 
       q: "What price will KEM launch at on DEX?", 
-      a: "$0.00845592 - providing 1.49x return for presale buyers and 2.98x for private sale investors (vested)." 
+      a: "$0.00845592 - providing a 2x return for presale buyers and a 3x return for private sale investors (vested)." 
     },
     { 
       q: "Is there a minimum or maximum investment?", 
