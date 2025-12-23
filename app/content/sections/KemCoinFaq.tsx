@@ -14,7 +14,7 @@ export default function FAQSection() {
     },
     { 
       q: "How are you funding operations?", 
-      a: "We raised $670k from private/presale. 80% went straight to liquidity. The 20% ($134k) covers marketing, development, and exchange listings. Plus we have a 90M KEM ecosystem fund for long-term growth." 
+      a: "We aim to raise $670k from private/presale. 80% will go straight to liquidity. The 20% ($134k) covers marketing, development, and exchange listings. Plus we have a 90M KEM ecosystem fund for long-term growth." 
     },
     { 
       q: "What's the Traderama Pro reserve for?", 
@@ -26,15 +26,15 @@ export default function FAQSection() {
     },
     { 
       q: "What price will KEM launch at on DEX?", 
-      a: "$0.00630720 - providing 1.49x return for presale buyers and 2.98x for private sale investors (vested)." 
+      a: "$0.00845592 - providing 1.49x return for presale buyers and 2.98x for private sale investors (vested)." 
     },
     { 
       q: "Is there a minimum or maximum investment?", 
-      a: "Presale: Min $100, Max $10,000 per wallet to ensure fair distribution across community members." 
+      a: "Presale: Min $500, Max $10,000 per wallet to ensure fair distribution across community members." 
     },
     { 
       q: "When can I use Traderama Pro?", 
-      a: "Platform beta launches Q2 2025. All KEM holders get early access with priority based on holding size and duration." 
+      a: "Platform beta launches Q2 2026. All KEM holders get early access with priority based on holding size and duration." 
     },
     { 
       q: "Do I need trading experience?", 
